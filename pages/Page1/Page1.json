@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 860,
+          "bottomRow": 1150,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -34,12 +34,22 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "data_table.sortOrder.column || 'id'",
-                "data_table.sortOrder.order || 'ASC'",
+                "(data_table.pageNo - 1) * data_table.pageSize",
                 "data_table.pageSize",
                 "data_table.searchText || \"\"",
-                "(data_table.pageNo - 1) * data_table.pageSize"
+                "data_table.sortOrder.column || 'id'",
+                "data_table.sortOrder.order || 'ASC'"
               ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_Api1",
+              "name": "Api1",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
